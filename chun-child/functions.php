@@ -19,6 +19,8 @@
 /* Add the child theme setup function to the 'after_setup_theme' hook. */
 add_action( 'after_setup_theme', 'chun_child_theme_setup', 11 );
 
+require_once('custom-post-types.php'); // Chama Snnipets de custom post types
+
 /**
  * Setup function.  All child themes should run their setup within this function.  The idea is to add/remove 
  * filters and actions after the parent theme has been set up.  This function provides you that opportunity.
@@ -37,5 +39,6 @@ function chun_child_theme_setup() {
 	// add_filter( "{$prefix}_site_title", 'chun_child_example_filter' );
 
 }
+
 
 ?>
